@@ -2,6 +2,8 @@ package com.zipcodewilmington.scientificcalculator;
 
 import java.util.Scanner;
 
+// AB
+
 /**
  * Created by leon on 2/9/18.
  */
@@ -22,17 +24,27 @@ public class Console {
         return userStrInput;
     }
 
+<<<<<<< HEAD
 
     public static Integer getIntegerInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
         int userIntInput = scanner.nextInt();
         return userIntInput;
+=======
+    // This method and the one below it share the exact same logic as the method above, just with different data types
+    public static Integer getIntegerInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        int userInput = scanner.nextInt();
+        return userInput;
+>>>>>>> 58913c8ed85d501b988349c55e0b36de8c06717b
     }
 
     public static Double getDoubleInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
+<<<<<<< HEAD
         double userDoubleInput = (int) scanner.nextDouble();
         return userDoubleInput;
     }
@@ -56,5 +68,44 @@ public class Console {
     public static double switchSign(double a) {
         return -1 * a ;
 
+=======
+        double userInput = scanner.nextDouble();
+        return userInput;
+>>>>>>> 58913c8ed85d501b988349c55e0b36de8c06717b
     }
+
+    // LOUIE'S METHODS
+
+    public static int multiplication(int number1, int number2) {
+        return number1 * number2;
+    }
+
+    public static int inverseSine(int number) {
+        return number;
+    }
+
+    public static int inverseCosine(int number) {
+        return number;
+    }
+
+    public static int inverseTangent(int number) {
+        return number;
+    }
+
+    public static int factorial(int number) {
+        int answer = number;
+        number--;
+        while (number > 0) {
+            answer *= number;
+            System.out.println(answer);
+            System.out.println(number);
+            number--;
+        }
+        return answer;
+    }
+
+    // GOWRI'S METHODS
+
+    // TEVIN'S METHODS
+
 }
