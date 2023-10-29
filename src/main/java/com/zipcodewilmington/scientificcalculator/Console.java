@@ -24,54 +24,18 @@ public class Console {
         return userStrInput;
     }
 
-<<<<<<< HEAD
-
     public static Integer getIntegerInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
         int userIntInput = scanner.nextInt();
         return userIntInput;
-=======
-    // This method and the one below it share the exact same logic as the method above, just with different data types
-    public static Integer getIntegerInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        int userInput = scanner.nextInt();
-        return userInput;
->>>>>>> 58913c8ed85d501b988349c55e0b36de8c06717b
     }
 
     public static Double getDoubleInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
-<<<<<<< HEAD
         double userDoubleInput = (int) scanner.nextDouble();
         return userDoubleInput;
-    }
-
-    public static double subtract(double a, double b) {
-        return a - b;
-    }
-
-    public static double square(double a) {
-        return a * a;
-    }
-
-    public static double squareRoot(double a){
-        return Math.sqrt(a);
-    }
-
-    public static double inverse(double a) {
-        return 1 / a;
-    }
-
-    public static double switchSign(double a) {
-        return -1 * a ;
-
-=======
-        double userInput = scanner.nextDouble();
-        return userInput;
->>>>>>> 58913c8ed85d501b988349c55e0b36de8c06717b
     }
 
     // LOUIE'S METHODS
@@ -105,6 +69,25 @@ public class Console {
     }
 
     // GOWRI'S METHODS
+    public static int square(int number) {
+        return number * number;
+    }
+    public static double squareRoot(int number){
+        return Math.sqrt(number);
+    }
+
+    public static double inverse(double number) {
+        return 1 / number;
+    }
+
+    public static int switchSign(int number) {
+        return -1 * number ;
+    }
+
+    public static int subtract(int number1, int number2) {
+        return number1 - number2;
+    }
+
 
     // TEVIN'S METHODS
 
