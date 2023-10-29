@@ -2,6 +2,7 @@ package com.zipcodewilmington.scientificcalculator;
 
 public class CalculatorState {
     private double currentValue;
+    private double memoryValue;
 
     public CalculatorState() {
         this.currentValue = 0;
@@ -19,6 +20,17 @@ public class CalculatorState {
         this.currentValue = 0;
     }
 
+    public void addToMemory() {
+        memoryValue += currentValue;
+    }
+
+    public void resetMemory() {
+        memoryValue = 0;
+    }
+
+    public void recallMemory() {
+        currentValue = memoryValue;
+    }
 
 }
 

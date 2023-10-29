@@ -15,22 +15,20 @@ public class InverseTangentTest {
 
     @Test
     public void InverseTangentTest1(){
-        double expected = 720;
-        double actual = Console.inverseTangent(6);
+        double expected = 0.46364760900081;
+        double actual = Console.inverseTangent(0.5);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void InverseTangentTest2(){
-        double expected = 720;
-        double actual = Console.inverseTangent(0);
+        double expected = -0.78539816339745;
+        double actual = Console.inverseTangent(-1);
         Assert.assertEquals(expected, actual);
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void InverseTangentTest3(){
-        double expected = 720;
-        double actual = Console.inverseTangent(-7);
-        Assert.assertEquals(expected, actual);
+        Console.inverseTangent(2);
     }
 }

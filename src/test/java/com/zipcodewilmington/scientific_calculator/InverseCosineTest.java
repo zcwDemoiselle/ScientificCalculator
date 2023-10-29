@@ -15,22 +15,20 @@ public class InverseCosineTest {
 
     @Test
     public void InverseCosineTest1(){
-        double expected = 720;
-        double actual = Console.inverseCosine(6);
+        double expected = 1.0471975511966;
+        double actual = Console.inverseCosine(0.5);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void InverseCosineTest2(){
-        double expected = 720;
-        double actual = Console.inverseCosine(0);
+        double expected = 3.1415926535898;
+        double actual = Console.inverseCosine(-1);
         Assert.assertEquals(expected, actual);
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void InverseCosineTest3(){
-        double expected = 720;
-        double actual = Console.inverseCosine(-7);
-        Assert.assertEquals(expected, actual);
+        Console.inverseCosine(2);
     }
 }

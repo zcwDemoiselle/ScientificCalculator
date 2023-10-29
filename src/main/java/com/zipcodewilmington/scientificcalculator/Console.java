@@ -79,6 +79,10 @@ public class Console {
         return answer;
     }
 
+    public static double modulus(double number1, double number2) {
+        return number1 % number2;
+    }
+
     public static void showHelp() {
         println("Welcome to the Scientific Calculator!");
         println("Usage: Enter your mathematical expression and press Enter.");
