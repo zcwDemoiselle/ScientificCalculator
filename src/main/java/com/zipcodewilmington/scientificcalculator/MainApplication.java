@@ -23,6 +23,6 @@ public class MainApplication {
         Console.println("The result of Inverse is : " + Console.inverse(i));
         Console.println("The result of switch sign is : " + Console.switchSign(i));
 
-        // Are we ready ?
+        // Are we ready ??
     }
 }
