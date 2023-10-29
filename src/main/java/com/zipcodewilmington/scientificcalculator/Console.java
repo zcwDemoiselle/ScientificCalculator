@@ -2,8 +2,6 @@ package com.zipcodewilmington.scientificcalculator;
 
 import java.util.Scanner;
 
-// AB
-
 /**
  * Created by leon on 2/9/18.
  */
@@ -23,21 +21,6 @@ public class Console {
         String userInput = scanner.nextLine();
         return userInput;
     }
-
-    // This method and the one below it share the exact same logic as the method above, just with different data types
-//    public static Integer getIntegerInput(String prompt) {
-//        Scanner scanner = new Scanner(System.in);
-//        println(prompt);
-//        int userInput = scanner.nextInt();
-//        return userInput;
-//    }
-//
-//    public static Double getDoubleInput(String prompt) {
-//        Scanner scanner = new Scanner(System.in);
-//        println(prompt);
-//        double userInput = scanner.nextDouble();
-//        return userInput;
-//    }
 
     // LOUIE'S METHODS
 
