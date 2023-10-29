@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class FactorialTest {
+public class InverseTangentTest {
     private Console scientificCalculator;
 
     @Before
@@ -14,23 +14,21 @@ public class FactorialTest {
     }
 
     @Test
-    public void FactorialTest1(){
-        double expected = 720;
-        double actual = Console.factorial(6);
+    public void InverseTangentTest1(){
+        double expected = 0.46364760900081;
+        double actual = Console.inverseTangent(0.5);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void FactorialTest2(){
-        double expected = 1;
-        double actual = Console.factorial(0);
+    public void InverseTangentTest2(){
+        double expected = -0.78539816339745;
+        double actual = Console.inverseTangent(-1);
         Assert.assertEquals(expected, actual);
     }
 
-    @Test
-    public void FactorialTest3(){
-        double expected = -362880;
-        double actual = Console.factorial(-9);
-        Assert.assertEquals(expected, actual);
+    @Test(expected = IllegalArgumentException.class)
+    public void InverseTangentTest3(){
+        Console.inverseTangent(2);
     }
 }

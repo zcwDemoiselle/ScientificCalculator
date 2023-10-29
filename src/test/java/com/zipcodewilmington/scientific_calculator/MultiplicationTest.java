@@ -15,22 +15,22 @@ public class MultiplicationTest {
 
     @Test
     public void MultiplicationTest1(){
-        int expected = 24;
-        int actual = Console.multiplication(6, 4);
+        double expected = 24;
+        double actual = Console.multiplication(6, 4);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void MultiplicationTest2(){
-        int expected = 0;
-        int actual = Console.multiplication(0, 7);
+        double expected = 0;
+        double actual = Console.multiplication(0, 7);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void MultiplicationTest3(){
-        int expected = 54;
-        int actual = Console.multiplication(-9, -6);
+        double expected = 54;
+        double actual = Console.multiplication(-9, -6);
         Assert.assertEquals(expected, actual);
     }
 }

@@ -87,10 +87,18 @@ public class MainApplication {
         String s = Console.getStringInput("Enter a string");
         Integer i = Console.getIntegerInput("Enter an integer");
         Double d = Console.getDoubleInput("Enter a double.");
+        RegexParser regexParser = new RegexParser();
+        Calculator calculator = new Calculator();
+        CalculatorState calculatorState = new CalculatorState();
 
-        Console.println("The user input %s as a string", s);
-        Console.println("The user input %s as a integer", i);
-        Console.println("The user input %s as a d", d);
+
+        Console.println("Welcome to the Demoiselle Calculator!");
+        loop:
+        while (true) {
+            double currentNumber = calculatorState.getCurrentValue();
+            String input = Console.getStringInput("");
+            double result = 0;
+
 
 
         Console.println("The result of square is : "  + Console.square(i));
@@ -99,6 +107,24 @@ public class MainApplication {
         Console.println("The result of switch sign is : " + Console.switchSign(i));
 
         // Are we ready ??
-    }
+            String num1 = regexParser.extractNumber(input);
+            String operator = regexParser.extractOperator(input);
+            String num2 = regexParser.extractNumber(input.substring(num1.length() + operator.length()).trim());
 
+            if (num2 == null) {
+                result = calculator.performUnaryOperation(Double.parseDouble(num1), operator);
+            }
+            else {
+                result = calculator.performBinaryOperation(Double.parseDouble(num1), Double.parseDouble(num2), operator);
+            }
+            Console.println(String.valueOf(result));
+
+            // Update the calculator state with the result
+//            calculatorState.setCurrentValue(result);
+
+            // Print the current number to the terminal
+//            Console.println("Current Number: " + result);
+        }
+    }
 }
+
