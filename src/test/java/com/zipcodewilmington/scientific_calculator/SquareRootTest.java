@@ -27,11 +27,14 @@ public class SquareRootTest {
         Assert.assertEquals(expected, actual, 0.0003f);
     }
 
-    @Test(expected = IllegalArgumentExpression.class)
-    public void SquareRootTest3(){
-        //double expected = new.IllegalArgumentExpression.class;
-        double actual = Console.squareRoot(-9);
-        Assert.assertEquals(expected, actual, 0.0003f);
+    @Test(expected = IllegalAccessException.class)
+    public void test() throws Exception {
+        double actual = Console.squareRoot(0);
+        Assert.assertEquals(null, actual, 0.0003f);
+
     }
-}
+
+    }
+
+
 
