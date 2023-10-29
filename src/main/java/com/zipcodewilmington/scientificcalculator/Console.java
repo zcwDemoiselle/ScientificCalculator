@@ -136,13 +136,18 @@ public class Console {
 
     // TEVIN'S METHODS
 
-    public static double add(double number1, double number2) {
+    public static double addition(double number1, double number2) {
         return number1 + number2;
     }
 
-    public static double divide(double number1, double number2) {
-        return number1 / number2;
+    public static double division(double number1, double number2) {
+        if (number2 != 0) {
+            return number1 / number2;
+        } else {
+            throw new IllegalArgumentException("Values cant be divided by 0");
+        }
     }
+
 
     public static double sine(double number1) {
         return Math.sin(number1) ;
