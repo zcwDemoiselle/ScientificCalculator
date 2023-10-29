@@ -18,8 +18,22 @@ public class Console {
     public static String getStringInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
-        String userInput = scanner.nextLine();
-        return userInput;
+        String userStrInput = scanner.nextLine();
+        return userStrInput;
+    }
+
+    public static Integer getIntegerInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        int userIntInput = scanner.nextInt();
+        return userIntInput;
+    }
+
+    public static Double getDoubleInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        double userDoubleInput = (int) scanner.nextDouble();
+        return userDoubleInput;
     }
 
     // LOUIE'S METHODS
@@ -29,15 +43,30 @@ public class Console {
     }
 
     public static double inverseSine(double number) {
-        return number;
+        if (number >= -1 && number <= 1) {
+            return Math.asin(number);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be between -1 and 1");
+        }
     }
 
     public static double inverseCosine(double number) {
-        return number;
+        if (number >= -1 && number <= 1) {
+            return Math.acos(number);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be between -1 and 1");
+        }
     }
 
     public static double inverseTangent(double number) {
-        return number;
+        if (number >= -1 && number <= 1) {
+            return Math.atan(number);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be between -1 and 1");
+        }
     }
 
     public static double factorial(double number) {
@@ -80,6 +109,30 @@ public class Console {
         }
 
     // GOWRI'S METHODS
+
+    public static int square(int number) {
+        return number * number;
+    }
+    public static double squareRoot(int number){
+        if (number > 0) {
+            return Math.sqrt(number);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be a positive integer");
+        }
+    }
+
+    public static double inverse(double number) {
+        return 1 / number;
+    }
+
+    public static int switchSign(int number) {
+        return -1 * number ;
+    }
+
+    public static int subtract(int number1, int number2) {
+        return number1 - number2;
+    }
 
     // TEVIN'S METHODS
 

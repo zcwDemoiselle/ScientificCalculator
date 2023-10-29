@@ -17,14 +17,14 @@ public class InverseSineTest {
     public void InverseSineTest1(){
         double expected = 0.5235987755983;
         double actual = Console.inverseSine(0.5);
-        Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual, .00000000000001);
     }
 
     @Test
     public void InverseSineTest2(){
         double expected = -1.5707963267949;
         double actual = Console.inverseSine(-1);
-        Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual, .00000000000001);
     }
 
     @Test(expected = IllegalArgumentException.class)
