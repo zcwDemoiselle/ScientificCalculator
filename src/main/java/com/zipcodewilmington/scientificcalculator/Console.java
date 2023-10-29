@@ -45,7 +45,7 @@ public class Console {
         return number1 * number2;
     }
 
-    public static int inverseSine(int number) {
+    public static double inverseSine(double number) {
         return number;
     }
 
@@ -59,14 +59,39 @@ public class Console {
 
     public static int factorial(int number) {
         int answer = number;
-        number--;
-        while (number > 0) {
-            answer *= number;
-            System.out.println(answer);
-            System.out.println(number);
+        if (number == 0) {
+            return 1;
+        }
+        else if (number < 0) {
+            number++;
+            while (number < 0) {
+                answer *= number;
+                number++;
+            }
+        }
+        else {
             number--;
+            while (number > 0) {
+                answer *= number;
+                number--;
+            }
         }
         return answer;
+    }
+
+    public static void showHelp() {
+        println("Welcome to the Scientific Calculator!");
+        println("Usage: Enter your mathematical expression and press Enter.");
+        println("Supported Operations:");
+        println("- Basic Arithmetic: +, -, *, /, %");
+        println("- Power: ^");
+        println("- Square Root: sqrt(number)");
+        println("- Logarithm: log(base, number)");
+        println("- Factorial: !(number)");
+        println("- Trigonometric Functions: sin(number), cos(number), tan(number)");
+        println("Example: 2 + sqrt(16) * log(2, 8)");
+        }
+
     }
 
     // GOWRI'S METHODS
