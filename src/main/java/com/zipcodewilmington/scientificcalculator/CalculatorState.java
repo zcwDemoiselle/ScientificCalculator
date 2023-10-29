@@ -18,5 +18,7 @@ public class CalculatorState {
     public void clearDisplay() {
         this.currentValue = 0;
     }
+
+
 }
 

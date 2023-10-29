@@ -25,23 +25,23 @@ public class Console {
     }
 
     // This method and the one below it share the exact same logic as the method above, just with different data types
-    public static Integer getIntegerInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        int userInput = scanner.nextInt();
-        return userInput;
-    }
-
-    public static Double getDoubleInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        double userInput = scanner.nextDouble();
-        return userInput;
-    }
+//    public static Integer getIntegerInput(String prompt) {
+//        Scanner scanner = new Scanner(System.in);
+//        println(prompt);
+//        int userInput = scanner.nextInt();
+//        return userInput;
+//    }
+//
+//    public static Double getDoubleInput(String prompt) {
+//        Scanner scanner = new Scanner(System.in);
+//        println(prompt);
+//        double userInput = scanner.nextDouble();
+//        return userInput;
+//    }
 
     // LOUIE'S METHODS
 
-    public static int multiplication(int number1, int number2) {
+    public static double multiplication(double number1, double number2) {
         return number1 * number2;
     }
 
@@ -49,16 +49,16 @@ public class Console {
         return number;
     }
 
-    public static int inverseCosine(int number) {
+    public static double inverseCosine(double number) {
         return number;
     }
 
-    public static int inverseTangent(int number) {
+    public static double inverseTangent(double number) {
         return number;
     }
 
-    public static int factorial(int number) {
-        int answer = number;
+    public static double factorial(double number) {
+        double answer = number;
         if (number == 0) {
             return 1;
         }
@@ -91,8 +91,6 @@ public class Console {
         println("- Trigonometric Functions: sin(number), cos(number), tan(number)");
         println("Example: 2 + sqrt(16) * log(2, 8)");
         }
-
-    }
 
     // GOWRI'S METHODS
 

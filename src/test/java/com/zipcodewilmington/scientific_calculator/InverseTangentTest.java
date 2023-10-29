@@ -15,22 +15,22 @@ public class InverseTangentTest {
 
     @Test
     public void InverseTangentTest1(){
-        int expected = 720;
-        int actual = Console.inverseTangent(6);
+        double expected = 720;
+        double actual = Console.inverseTangent(6);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void InverseTangentTest2(){
-        int expected = 720;
-        int actual = Console.inverseTangent(0);
+        double expected = 720;
+        double actual = Console.inverseTangent(0);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void InverseTangentTest3(){
-        int expected = 720;
-        int actual = Console.inverseTangent(-7);
+        double expected = 720;
+        double actual = Console.inverseTangent(-7);
         Assert.assertEquals(expected, actual);
     }
 }

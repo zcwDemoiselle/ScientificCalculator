@@ -15,22 +15,22 @@ public class FactorialTest {
 
     @Test
     public void FactorialTest1(){
-        int expected = 720;
-        int actual = Console.factorial(6);
+        double expected = 720;
+        double actual = Console.factorial(6);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void FactorialTest2(){
-        int expected = 1;
-        int actual = Console.factorial(0);
+        double expected = 1;
+        double actual = Console.factorial(0);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void FactorialTest3(){
-        int expected = -362880;
-        int actual = Console.factorial(-9);
+        double expected = -362880;
+        double actual = Console.factorial(-9);
         Assert.assertEquals(expected, actual);
     }
 }
