@@ -22,20 +22,6 @@ public class Console {
         return userStrInput;
     }
 
-    public static Integer getIntegerInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        int userIntInput = scanner.nextInt();
-        return userIntInput;
-    }
-
-    public static Double getDoubleInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        double userDoubleInput = (int) scanner.nextDouble();
-        return userDoubleInput;
-    }
-
     // LOUIE'S METHODS
 
     public static double multiplication(double number1, double number2) {
