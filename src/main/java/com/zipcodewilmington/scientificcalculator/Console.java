@@ -140,7 +140,12 @@ public class Console {
     }
 
     public static double inverse(double number) {
-        return 1 / number;
+        if (number != 0) {
+            return 1/number;
+        }else {
+            throw new IllegalArgumentException("Value cannot be zero");
+        }
+
     }
 
 
