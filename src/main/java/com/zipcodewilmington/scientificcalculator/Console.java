@@ -23,6 +23,15 @@ public class Console {
         return userStrInput;
     }
 
+    public static double handleRemainder(double number) {
+        if (number % 1 == 0) {
+            return (int) number;
+        }
+        else {
+            return number;
+        }
+    }
+
     // LOUIE'S METHODS
 
     public static double multiplication(double number1, double number2) {

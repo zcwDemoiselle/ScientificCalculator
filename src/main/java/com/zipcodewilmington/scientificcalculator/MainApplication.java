@@ -10,7 +10,7 @@ public class MainApplication {
         Calculator calculator = new Calculator();
 
         JOptionPane optionPane = new JOptionPane();
-        String welcome = "Welcome to our calculator!";
+        String welcome = "\n\n\nWelcome to our calculator!\n\n\n";
         JOptionPane.showMessageDialog(null, welcome, "Demoiselle Calculator", JOptionPane.PLAIN_MESSAGE);
 
         loop:
@@ -29,6 +29,8 @@ public class MainApplication {
             } else {
                 result = calculator.performBinaryOperation(Double.parseDouble(num1), Double.parseDouble(num2), operator);
             }
+            result = Console.handleRemainder(result);
+            Console.println(String.valueOf(result));
             JOptionPane.showMessageDialog(null, String.valueOf(result));
         }
     }
