@@ -9,13 +9,12 @@ public class PrintDebug {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
 
-        JOptionPane optionPane = new JOptionPane();
         Console.println("Welcome to Demoiselle Calculator");
 
         loop:
         while (true) {
             String input = Console.getStringInput("Enter an operation: ");
-            double result = 0;
+            double result;
 
             String num1 = RegexParser.extractNumber(input);
             String operator = RegexParser.extractOperator(input);
@@ -26,8 +25,9 @@ public class PrintDebug {
             } else {
                 result = calculator.performBinaryOperation(Double.parseDouble(num1), Double.parseDouble(num2), operator);
             }
+            System.out.println("Before: " + String.valueOf(result));
             result = Console.handleRemainder(result);
-            Console.println(String.valueOf(result));
+            System.out.println("After:  " + String.valueOf(result));
         }
     }
 }
