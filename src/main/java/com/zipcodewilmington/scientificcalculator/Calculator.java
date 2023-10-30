@@ -6,17 +6,34 @@ public class Calculator {
     public double performUnaryOperation(double number1, String operator) {
         switch (operator) {
             case "log(":
-                return Math.log(number1); // Logarithm with base 10
+                return Console.logarithm(number1); // Logarithm with base 10
+            case "ln(":
+                return Console.naturalLogarithm(number1);
+            case "invlog(":
+                return Console.inverseLogarithm(number1); // Logarithm with base 10
+            case "invln(":
+                return Console.inverseNaturalLogarithm(number1);
             case "sqrt(":
-                return Math.sqrt(number1);
-//            case "h":
-//            case "help":
-//                Console.showHelp();
+                return Console.squareRoot(number1);
+            case "sin(":
+                return Console.sine(number1);
+            case "cos(":
+                return Console.cosine(number1);
+            case "tan(":
+                return Console.tangent(number1);
+            case "asin(":
+                return Console.inverseSine(number1);
+            case "acos(":
+                return Console.inverseCosine(number1);
+            case "atan(":
+                return Console.inverseTangent(number1);
             case "!":
                 return Console.factorial(number1);
-            case "1/x":
+            case "1/":
                 return Console.inverse(number1);
-            case "-x":
+            case "^2":
+                return Console.square(number1);
+            case "switch(":
                 return Console.switchSign(number1);
             default:
                 throw new IllegalArgumentException("Invalid operator: " + operator);
@@ -31,19 +48,11 @@ public class Calculator {
             case "*":
                 return Console.multiplication(number1, number2);
             case "/":
-                if (number2 != 0) {
-                    return number1 / number2;
-                } else {
-                    throw new ArithmeticException("Division by zero is not allowed.");
-                }
+                return Console.division(number1, number2);
             case "%":
                 return Console.modulus(number1, number2);
             case "^":
                 return Math.pow(number1, number2);
-            case "log(":
-                return Math.log(number2) / Math.log(number1); // Logarithm with base num1
-            case "!":
-                return Console.factorial(number1);
             default:
                 throw new IllegalArgumentException("Invalid operator: " + operator);
         }
