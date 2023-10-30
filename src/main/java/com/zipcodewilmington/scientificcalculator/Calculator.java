@@ -9,11 +9,15 @@ public class Calculator {
                 return Math.log(num1); // Logarithm with base 10
             case "sqrt(":
                 return Math.sqrt(num1);
-            case "h":
+            //case "h":
             case "help":
                 Console.showHelp();
             case "!":
                 return Console.factorial(num1);
+            case "1/x":
+                return Console.inverse(num1);
+            case "-x":
+                return Console.switchSign(num1);
             default:
                 throw new IllegalArgumentException("Invalid operator: " + operator);
         }

@@ -22,6 +22,7 @@ public class Console {
         return userStrInput;
     }
 
+
     public static Integer getIntegerInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
@@ -35,6 +36,23 @@ public class Console {
         double userDoubleInput = (int) scanner.nextDouble();
         return userDoubleInput;
     }
+
+
+    // This method and the one below it share the exact same logic as the method above, just with different data types
+//    public static Integer getIntegerInput(String prompt) {
+//        Scanner scanner = new Scanner(System.in);
+//        println(prompt);
+//        int userInput = scanner.nextInt();
+//        return userInput;
+//    }
+//
+//    public static Double getDoubleInput(String prompt) {
+//        Scanner scanner = new Scanner(System.in);
+//        println(prompt);
+//        double userInput = scanner.nextDouble();
+//        return userInput;
+//    }
+
 
     // LOUIE'S METHODS
 
@@ -126,7 +144,7 @@ public class Console {
         return 1 / number;
     }
 
-    public static int switchSign(int number) {
+    public static double switchSign(double number) {
         return -1 * number ;
     }
 
