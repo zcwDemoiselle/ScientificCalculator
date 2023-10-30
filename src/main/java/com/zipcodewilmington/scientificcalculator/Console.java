@@ -2,8 +2,6 @@ package com.zipcodewilmington.scientificcalculator;
 
 import java.util.Scanner;
 
-// AB
-
 /**
  * Created by leon on 2/9/18.
  */
@@ -39,6 +37,7 @@ public class Console {
         return userDoubleInput;
     }
 
+
     // This method and the one below it share the exact same logic as the method above, just with different data types
 //    public static Integer getIntegerInput(String prompt) {
 //        Scanner scanner = new Scanner(System.in);
@@ -62,15 +61,30 @@ public class Console {
     }
 
     public static double inverseSine(double number) {
-        return number;
+        if (number >= -1 && number <= 1) {
+            return Math.asin(number);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be between -1 and 1");
+        }
     }
 
     public static double inverseCosine(double number) {
-        return number;
+        if (number >= -1 && number <= 1) {
+            return Math.acos(number);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be between -1 and 1");
+        }
     }
 
     public static double inverseTangent(double number) {
-        return number;
+        if (number >= -1 && number <= 1) {
+            return Math.atan(number);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be between -1 and 1");
+        }
     }
 
     public static double factorial(double number) {
@@ -113,11 +127,17 @@ public class Console {
         }
 
     // GOWRI'S METHODS
+
     public static int square(int number) {
         return number * number;
     }
     public static double squareRoot(int number){
-        return Math.sqrt(number);
+        if (number > 0) {
+            return Math.sqrt(number);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be a positive integer");
+        }
     }
 
     public static double inverse(double number) {
@@ -132,7 +152,30 @@ public class Console {
         return number1 - number2;
     }
 
-
     // TEVIN'S METHODS
 
+    public static double addition(double number1, double number2) {
+        return number1 + number2;
+    }
+
+    public static double division(double number1, double number2) {
+        if (number2 != 0) {
+            return number1 / number2;
+        } else {
+            throw new IllegalArgumentException("Values cant be divided by 0");
+        }
+    }
+
+
+    public static double sine(double number1) {
+        return Math.sin(number1) ;
+    }
+
+    public static double cosine(double number1) {
+        return Math.cos(number1);
+    }
+
+    public static double tangent(double number1) {
+        return Math.tan(number1);
+    }
 }

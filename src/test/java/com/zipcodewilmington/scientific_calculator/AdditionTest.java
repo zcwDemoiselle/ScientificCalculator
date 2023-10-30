@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class SquareRootTest {
+public class AdditionTest {
     private Console scientificCalculator;
 
     @Before
@@ -14,22 +14,23 @@ public class SquareRootTest {
     }
 
     @Test
-    public void SquareRootTest1(){
-        double expected = 2;
-        double actual = Console.squareRoot(4);
+    public void AdditionTest1(){
+        double expected = 10;
+        double actual = Console.addition(6, 4);
         Assert.assertEquals(expected, actual, 0.0003f);
     }
 
     @Test
-    public void SquareRootTest2(){
-        double expected = 0;
-        double actual = Console.squareRoot(0);
+    public void AdditionTest2(){
+        double expected = 7;
+        double actual = Console.addition(0, 7);
         Assert.assertEquals(expected, actual, 0.0003f);
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void SquareRootTest3() { Console.squareRoot(-9); }
+    @Test
+    public void AdditionTest3(){
+        double expected = -15;
+        double actual = Console.addition(-9, -6);
+        Assert.assertEquals(expected, actual, 0.0003f);
+    }
 }
-
-
-

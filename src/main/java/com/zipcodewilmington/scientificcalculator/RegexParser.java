@@ -15,7 +15,7 @@ public class RegexParser {
 
     public static String extractOperator(String input) {
         // Use regex to extract the operator from the input
-        Pattern operatorPattern = Pattern.compile("[+\\-*/%]|\\^|log\\(|ln\\(|sin\\(|cos\\(|tan\\(|asin\\(|acos\\(|atan\\(|sqrt\\(|h|help");
+        Pattern operatorPattern = Pattern.compile("[+\\-*/%]|\\^|log\\(|ln\\(|sin\\(|cos\\(|tan\\(|asin\\(|acos\\(|atan\\(|sqrt\\(|!|h|help");
         Matcher matcher = operatorPattern.matcher(input);
         if (matcher.find()) {
             return matcher.group();

@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class SquareRootTest {
+public class DivisionTest {
     private Console scientificCalculator;
 
     @Before
@@ -14,22 +14,19 @@ public class SquareRootTest {
     }
 
     @Test
-    public void SquareRootTest1(){
-        double expected = 2;
-        double actual = Console.squareRoot(4);
-        Assert.assertEquals(expected, actual, 0.0003f);
-    }
-
-    @Test
-    public void SquareRootTest2(){
-        double expected = 0;
-        double actual = Console.squareRoot(0);
+    public void DivisionTest1(){
+        double expected = 1.5;
+        double actual = Console.division(6, 4);
         Assert.assertEquals(expected, actual, 0.0003f);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void SquareRootTest3() { Console.squareRoot(-9); }
+    public void DivisionTest2(){Console.division(7, 0);}
+
+    @Test
+    public void DivisionTest3(){
+        double expected = 3;
+        double actual = Console.division(9,3);
+        Assert.assertEquals(expected, actual, 0.0003f);
+    }
 }
-
-
-
