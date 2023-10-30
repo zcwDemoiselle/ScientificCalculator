@@ -22,6 +22,37 @@ public class Console {
         return userStrInput;
     }
 
+    public static Integer getIntegerInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        int userIntInput = scanner.nextInt();
+        return userIntInput;
+    }
+
+    public static Double getDoubleInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        double userDoubleInput = (int) scanner.nextDouble();
+        return userDoubleInput;
+    }
+
+
+    // This method and the one below it share the exact same logic as the method above, just with different data types
+//    public static Integer getIntegerInput(String prompt) {
+//        Scanner scanner = new Scanner(System.in);
+//        println(prompt);
+//        int userInput = scanner.nextInt();
+//        return userInput;
+//    }
+//
+//    public static Double getDoubleInput(String prompt) {
+//        Scanner scanner = new Scanner(System.in);
+//        println(prompt);
+//        double userInput = scanner.nextDouble();
+//        return userInput;
+//    }
+
+
     // LOUIE'S METHODS
 
     public static double multiplication(double number1, double number2) {
@@ -112,7 +143,7 @@ public class Console {
         return 1 / number;
     }
 
-    public static int switchSign(int number) {
+    public static double switchSign(double number) {
         return -1 * number ;
     }
 
@@ -122,13 +153,18 @@ public class Console {
 
     // TEVIN'S METHODS
 
-    public static double add(double number1, double number2) {
+    public static double addition(double number1, double number2) {
         return number1 + number2;
     }
 
-    public static double divide(double number1, double number2) {
-        return number1 / number2;
+    public static double division(double number1, double number2) {
+        if (number2 != 0) {
+            return number1 / number2;
+        } else {
+            throw new IllegalArgumentException("Values cant be divided by 0");
+        }
     }
+
 
     public static double sine(double number1) {
         return Math.sin(number1) ;

@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class InverseTest {
+public class DivisionTest {
     private Console scientificCalculator;
 
     @Before
@@ -14,24 +14,19 @@ public class InverseTest {
     }
 
     @Test
-    public void InverseTest1(){
-        double expected = 0.16666666666;
-        double actual = Console.inverse(6);
+    public void DivisionTest1(){
+        double expected = 1.5;
+        double actual = Console.division(6, 4);
         Assert.assertEquals(expected, actual, 0.0003f);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void DivisionTest2(){Console.division(7, 0);}
 
     @Test
-    public void InverseTest2(){
-        double expected = 1;
-        double actual = Console.inverse(1);
+    public void DivisionTest3(){
+        double expected = 3;
+        double actual = Console.division(9,3);
         Assert.assertEquals(expected, actual, 0.0003f);
     }
-
-    @Test(expected = IllegalAccessException.class)
-    public void test() throws Exception {
-        double actual = Console.inverse(0);
-        Assert.assertEquals(null, actual, 0.0003f);
-
-    }
 }
-
