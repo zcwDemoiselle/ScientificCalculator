@@ -7,9 +7,7 @@ import javax.swing.*;
  */
 public class MainApplication {
     public static void main(String[] args) {
-        JFrame jFrame = new JFrame(); // to create a frame
         Calculator calculator = new Calculator();
-        RegexParser regexParser = new RegexParser();
 
         JOptionPane.showMessageDialog(null, "Welcome to the Demoiselle Calculator!");
         loop:
