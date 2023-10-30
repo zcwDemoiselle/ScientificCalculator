@@ -26,7 +26,8 @@ public class Console {
     public static double handleRemainder(double number) {
         double tolerance = 1e-10;
         if (Math.abs(number % 1) < tolerance) {
-            return (int) number;
+            int converted = (int) number;
+            return converted;
         }
         else {
             return number;

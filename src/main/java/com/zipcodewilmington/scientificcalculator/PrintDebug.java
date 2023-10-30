@@ -25,9 +25,8 @@ public class PrintDebug {
             } else {
                 result = calculator.performBinaryOperation(Double.parseDouble(num1), Double.parseDouble(num2), operator);
             }
-            System.out.println("Before: " + String.valueOf(result));
             result = Console.handleRemainder(result);
-            System.out.println("After:  " + String.valueOf(result));
+            Console.println(String.valueOf(result));
         }
     }
 }
