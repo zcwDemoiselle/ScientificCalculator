@@ -95,7 +95,34 @@ public class Console {
 
     public static double logarithm(double number) {
         if (number > 0) {
+            return Math.log10(number);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be greater than 0");
+        }
+    }
+
+    public static double naturalLogarithm(double number) {
+        if (number > 0) {
             return Math.log(number);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be greater than 0");
+        }
+    }
+
+    public static double inverseLogarithm(double number) {
+        if (number > 0) {
+            return Math.pow(10, number);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be greater than 0");
+        }
+    }
+
+    public static double inverseNaturalLogarithm(double number) {
+        if (number > 0) {
+            return Math.exp(number);
         }
         else {
             throw new IllegalArgumentException("Value must be greater than 0");
