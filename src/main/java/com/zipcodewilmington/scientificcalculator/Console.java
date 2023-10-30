@@ -144,6 +144,7 @@ public class Console {
         return 1 / number;
     }
 
+
     public static double switchSign(double number) {
         return -1 * number ;
     }

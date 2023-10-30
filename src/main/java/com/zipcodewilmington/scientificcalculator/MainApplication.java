@@ -145,62 +145,6 @@ public class MainApplication {
 
             JOptionPane.showMessageDialog(null, res);
 
-
-//        switch (operator) {
-//            case "+" :
-//                //int res = Console.(number1, number2);
-//                //JOptionPane.showMessageDialog(null, "The result of \"-\" is : " + res);
-//                break;
-//            case "-" :
-//                //int res = ;
-//                JOptionPane.showMessageDialog(null, "The result of \"-\" is : " + Console.subtract(number1, number2));
-//                break;
-//            case "*":
-//                //int res = Console.square(number1);
-//                //JOptionPane.showMessageDialog(null, "The result of \"\" is : " + mulitply(number1));
-//                //break;
-//            case "x2":
-//                int res = Console.square(number1);
-//                JOptionPane.showMessageDialog(null, "The result of \"x2\" is : " + Console.square(number1));
-//                break;
-//            case "√":
-//                //int res = Console.square(number1);
-//                JOptionPane.showMessageDialog(null, "The result of \"√\" is : " + Console.squareRoot(number1));
-//                break;
-//            case "1/x":
-//                //int res = Console.square(number1);
-//                JOptionPane.showMessageDialog(null, "The result of \"1/x\" is : " + Console.inverse(number1));
-//                break;
-//            case "switchSign":
-//                //int res = Console.square(number1);
-//                JOptionPane.showMessageDialog(null, "The result of \"switchsign\" is : " + Console.switchSign(number1));
-//                break;
-//            case "inverseSine":
-//                //int res = Console.square(number1);
-//                JOptionPane.showMessageDialog(null, "The result of \"inversesine\" is : " + Console.inverseSine(number1));
-//                break;
-//            case "inverseCosine":
-//                //int res = Console.square(number1);
-//                JOptionPane.showMessageDialog(null, "The result of \"inversecosine\" is : " + Console.inverseCosine(number1));
-//                break;
-//            case "inverseTangent":
-//                //int res = Console.square(number1);
-//                JOptionPane.showMessageDialog(null, "The result of \"inversetangent\" is : " + Console.inverseTangent(number1));
-//                break;
-//            case "factorial":
-//                //int res = Console.square(number1);
-//                JOptionPane.showMessageDialog(null, "The result of \"factorial\" is : " + Console.factorial(number1));
-//                break;
-//            //case "":
-//                //int res = Console.square(number1);
-//              //  JOptionPane.showMessageDialog(null, "The result of \"\" is : " + Console.square(number1));
-//                //break;
-//
-//            default :
-//                JOptionPane.showMessageDialog(null,"Please select the correct option from the list");
-//        }
-
-
             Console.println("Welcome to my calculator!");
             String s = Console.getStringInput("Enter a string");
             Integer i = Console.getIntegerInput("Enter an integer");
