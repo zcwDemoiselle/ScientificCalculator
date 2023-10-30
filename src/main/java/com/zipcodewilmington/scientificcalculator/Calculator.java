@@ -9,9 +9,9 @@ public class Calculator {
                 return Math.log(number1); // Logarithm with base 10
             case "sqrt(":
                 return Math.sqrt(number1);
-            //case "h":
-            case "help":
-                Console.showHelp();
+//            case "h":
+//            case "help":
+//                Console.showHelp();
             case "!":
                 return Console.factorial(number1);
             case "1/x":
@@ -25,9 +25,9 @@ public class Calculator {
     public double performBinaryOperation(double number1, double number2, String operator) {
         switch (operator) {
             case "+":
-                return number1 + number2;
+                return Console.addition(number1, number2);
             case "-":
-                return number1 - number2;
+                return Console.subtraction(number1, number2);
             case "*":
                 return Console.multiplication(number1, number2);
             case "/":

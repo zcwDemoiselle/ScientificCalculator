@@ -9,10 +9,13 @@ public class MainApplication {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
 
-        JOptionPane.showMessageDialog(null, "Welcome to the Demoiselle Calculator!");
+        JOptionPane optionPane = new JOptionPane();
+        String welcome = "Welcome to our calculator!";
+        JOptionPane.showMessageDialog(null, welcome, "Demoiselle Calculator", JOptionPane.PLAIN_MESSAGE);
+
         loop:
         while (true) {
-            String input = JOptionPane.showInputDialog("");
+            String input = JOptionPane.showInputDialog("Enter an operation: ");
             double result = 0;
 
             String num1 = RegexParser.extractNumber(input);

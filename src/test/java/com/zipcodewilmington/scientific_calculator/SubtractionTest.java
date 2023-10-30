@@ -16,21 +16,21 @@ public class SubtractionTest {
     @Test
     public void SubtractionTest1(){
         double expected = 2;
-        double actual = Console.subtract(6, 4);
+        double actual = Console.subtraction(6, 4);
         Assert.assertEquals(expected, actual, 0.0003f);
     }
 
     @Test
     public void SubtractionTest2(){
         double expected = -7;
-        double actual = Console.subtract(0, 7);
+        double actual = Console.subtraction(0, 7);
         Assert.assertEquals(expected, actual, 0.0003f);
     }
 
     @Test
     public void SubtractionTest3(){
         double expected = -3;
-        double actual = Console.subtract(-9, -6);
+        double actual = Console.subtraction(-9, -6);
         Assert.assertEquals(expected, actual, 0.0003f);
     }
 }

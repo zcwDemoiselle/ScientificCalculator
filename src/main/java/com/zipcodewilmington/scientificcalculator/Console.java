@@ -97,10 +97,10 @@ public class Console {
 
     // GOWRI'S METHODS
 
-    public static int square(int number) {
+    public static double square(double number) {
         return number * number;
     }
-    public static double squareRoot(int number){
+    public static double squareRoot(double number){
         if (number > 0) {
             return Math.sqrt(number);
         }
@@ -123,7 +123,7 @@ public class Console {
         return -1 * number ;
     }
 
-    public static int subtract(int number1, int number2) {
+    public static double subtraction(double number1, double number2) {
         return number1 - number2;
     }
 
