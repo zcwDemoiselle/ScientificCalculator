@@ -22,7 +22,6 @@ public class Console {
         return userStrInput;
     }
 
-
     public static Integer getIntegerInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
@@ -169,14 +168,29 @@ public class Console {
 
 
     public static double sine(double number1) {
-        return Math.sin(number1) ;
+        if (number1 >= -1 && number1 <= 1) {
+            return Math.sin(number1);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be between -1 and 1");
+        }
     }
 
     public static double cosine(double number1) {
-        return Math.cos(number1);
+        if (number1 >= -1 && number1 <= 1) {
+            return Math.cos(number1);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be between -1 and 1");
+        }
     }
 
     public static double tangent(double number1) {
-        return Math.tan(number1);
+        if (number1 >= -1 && number1 <= 1) {
+            return Math.tan(number1);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be between -1 and 1");
+        }
     }
 }
