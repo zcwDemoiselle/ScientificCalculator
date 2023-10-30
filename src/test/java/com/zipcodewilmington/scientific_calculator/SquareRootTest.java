@@ -20,12 +20,8 @@ public class SquareRootTest {
         Assert.assertEquals(expected, actual, 0.0003f);
     }
 
-    @Test
-    public void SquareRootTest2(){
-        double expected = 0;
-        double actual = Console.squareRoot(0);
-        Assert.assertEquals(expected, actual, 0.0003f);
-    }
+    @Test(expected = IllegalArgumentException.class)
+    public void SquareRootTest2() { Console.squareRoot(0); }
 
     @Test(expected = IllegalArgumentException.class)
     public void SquareRootTest3() { Console.squareRoot(-9); }
