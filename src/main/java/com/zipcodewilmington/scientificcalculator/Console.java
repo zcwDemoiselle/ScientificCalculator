@@ -93,6 +93,15 @@ public class Console {
         return number1 % number2;
     }
 
+    public static double logarithm(double number) {
+        if (number > 0) {
+            return Math.log(number);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be greater than 0");
+        }
+    }
+
     public static void showHelp() {
         println("Welcome to the Scientific Calculator!");
         println("Usage: Enter your mathematical expression and press Enter.");
