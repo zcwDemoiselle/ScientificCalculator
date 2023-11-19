@@ -18,6 +18,12 @@ public class Calculator {
                 return Console.inverse(num1);
             case "-x":
                 return Console.switchSign(num1);
+            case "10x":
+                return Console.logInverse(num1);
+            case "Ln":
+                return Console.naturalAlgorithm(num1);
+            case "ex":
+                return Console.inverseNaturalAlgorithm(num1);
             default:
                 throw new IllegalArgumentException("Invalid operator: " + operator);
         }

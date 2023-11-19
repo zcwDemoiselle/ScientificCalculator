@@ -112,6 +112,7 @@ public class Console {
         return number1 % number2;
     }
 
+
     public static void showHelp() {
         println("Welcome to the Scientific Calculator!");
         println("Usage: Enter your mathematical expression and press Enter.");
@@ -123,6 +124,9 @@ public class Console {
         println("- Factorial: !(number)");
         println("- Trigonometric Functions: sin(number), cos(number), tan(number)");
         println("Example: 2 + sqrt(16) * log(2, 8)");
+        //println("Natural Logarithm: (");
+        //println("- InverseLog: ");
+        //println("- InverseNaturalLog: ");
         }
 
     // GOWRI'S METHODS
@@ -157,6 +161,15 @@ public class Console {
         return number1 - number2;
     }
 
+    public static double logInverse(double number1) {
+        return Math.pow(10,number1);
+    }
+    public static double naturalLogarithm(double number1) {
+        return naturallgorithm(number1);
+    }
+    public static double inverseNaturalLogarithm(double number1) {
+        return inverseNaturallgorithm(number1);
+    }
     // TEVIN'S METHODS
 
     public static double addition(double number1, double number2) {
