@@ -15,14 +15,14 @@ public class InverseLogTest {
 
     @Test
     public void InverseLog1(){
-        double expected = -0.3010299956639812;
+        double expected = 3.1622776601683795;
         double actual = Console.logInverse(0.5);
         Assert.assertEquals(expected, actual, .00000000000001);
     }
 
     @Test
     public void InverseLog2(){
-        double expected = 0.0;
+        double expected = 10.0;
         double actual = Console.logInverse(1);
         Assert.assertEquals(expected, actual, .00000000000001);
     }
