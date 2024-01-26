@@ -5,6 +5,7 @@ import java.util.Scanner;
 /**
  * Created by leon on 2/9/18.
  */
+
 public class Console {
 
     public static void print(String output, Object... args) {
@@ -22,36 +23,16 @@ public class Console {
         return userStrInput;
     }
 
-    public static Integer getIntegerInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        int userIntInput = scanner.nextInt();
-        return userIntInput;
+    public static double handleRemainder(double number) {
+        double tolerance = 1e-10;
+        if (Math.abs(number % 1) < tolerance) {
+            int converted = (int) number;
+            return converted;
+        }
+        else {
+            return number;
+        }
     }
-
-    public static Double getDoubleInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        double userDoubleInput = (int) scanner.nextDouble();
-        return userDoubleInput;
-    }
-
-
-    // This method and the one below it share the exact same logic as the method above, just with different data types
-//    public static Integer getIntegerInput(String prompt) {
-//        Scanner scanner = new Scanner(System.in);
-//        println(prompt);
-//        int userInput = scanner.nextInt();
-//        return userInput;
-//    }
-//
-//    public static Double getDoubleInput(String prompt) {
-//        Scanner scanner = new Scanner(System.in);
-//        println(prompt);
-//        double userInput = scanner.nextDouble();
-//        return userInput;
-//    }
-
 
     // LOUIE'S METHODS
 
@@ -113,6 +94,43 @@ public class Console {
     }
 
 
+    public static double logarithm(double number) {
+        if (number > 0) {
+            return Math.log10(number);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be greater than 0");
+        }
+    }
+
+//    public static double naturalLogarithm(double number) {
+//        if (number > 0) {
+//            return Math.log(number);
+//        }
+//        else {
+//            throw new IllegalArgumentException("Value must be greater than 0");
+//        }
+//    }
+
+    public static double inverseLogarithm(double number) {
+        if (number > 0) {
+            return Math.pow(10, number);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be greater than 0");
+        }
+    }
+
+//    public static double inverseNaturalLogarithm(double number) {
+//        if (number > 0) {
+//            return Math.exp(number);
+//        }
+//        else {
+//            throw new IllegalArgumentException("Value must be greater than 0");
+//        }
+//    }
+
+
     public static void showHelp() {
         println("Welcome to the Scientific Calculator!");
         println("Usage: Enter your mathematical expression and press Enter.");
@@ -131,10 +149,10 @@ public class Console {
 
     // GOWRI'S METHODS
 
-    public static int square(int number) {
+    public static double square(double number) {
         return number * number;
     }
-    public static double squareRoot(int number){
+    public static double squareRoot(double number){
         if (number > 0) {
             return Math.sqrt(number);
         }
@@ -157,7 +175,7 @@ public class Console {
         return -1 * number ;
     }
 
-    public static int subtract(int number1, int number2) {
+    public static double subtraction(double number1, double number2) {
         return number1 - number2;
     }
 
@@ -165,10 +183,10 @@ public class Console {
         return Math.pow(10,number1);
     }
     public static double naturalLogarithm(double number1) {
-        return naturallgorithm(number1);
+        return naturalLogarithm(number1);
     }
     public static double inverseNaturalLogarithm(double number1) {
-        return inverseNaturallgorithm(number1);
+        return inverseNaturalLogarithm(number1);
     }
     // TEVIN'S METHODS
 

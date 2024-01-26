@@ -1,0 +1,44 @@
+@startuml
+
+class MainApplication {
+    + main(String[] args): void
+}
+
+class Console {
+    + print(String output, Object... args): void
+    + println(String output, Object... args): void
+    + getStringInput(String prompt): String
+    + multiplication(double number1, double number2): double
+    + inverseSine(double number): double
+    + inverseCosine(double number): double
+    + inverseTangent(double number): double
+    + factorial(double number): double
+    + modulus(double number1, double number2): double
+    + showHelp(): void
+    + square(int number): int
+    + squareRoot(int number): double
+    + inverse(double number): double
+    + switchSign(double number): double
+    + subtract(int number1, int number2): int
+    + addition(double number1, double number2): double
+    + division(double number1, double number2): double
+    + sine(double number1): double
+    + cosine(double number1): double
+    + tangent(double number1): double
+}
+
+class Calculator {
+    + performUnaryOperation(double number1, String operator): double
+    + performBinaryOperation(double number1, double number2, String operator): double
+    + performOther(String operator): String
+}
+
+class RegexParser {
+    + extractNumber(String input): String
+    + extractOperator((String input): String
+}
+
+MainApplication -- Calculator: Uses
+MainApplication -- RegexParser: Uses
+Console -- Calculator: Uses
+@enduml

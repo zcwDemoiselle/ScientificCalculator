@@ -3,53 +3,70 @@ package com.zipcodewilmington.scientificcalculator;
 import java.lang.Math;
 
 public class Calculator {
-    public double performUnaryOperation(double num1, String operator) {
+    public double performUnaryOperation(double number1, String operator) {
         switch (operator) {
             case "log(":
-                return Math.log(num1); // Logarithm with base 10
+                return Console.logarithm(number1); // Logarithm with base 10
+            case "ln(":
+                return Console.naturalLogarithm(number1);
+            case "invlog(":
+                return Console.inverseLogarithm(number1); // Logarithm with base 10
+            case "invln(":
+                return Console.inverseNaturalLogarithm(number1);
             case "sqrt(":
-                return Math.sqrt(num1);
-            //case "h":
-            case "help":
-                Console.showHelp();
+                return Console.squareRoot(number1);
+            case "sin(":
+                return Console.sine(number1);
+            case "cos(":
+                return Console.cosine(number1);
+            case "tan(":
+                return Console.tangent(number1);
+            case "asin(":
+                return Console.inverseSine(number1);
+            case "acos(":
+                return Console.inverseCosine(number1);
+            case "atan(":
+                return Console.inverseTangent(number1);
             case "!":
-                return Console.factorial(num1);
+
+                return Console.factorial(number1);
             case "1/x":
-                return Console.inverse(num1);
+                return Console.inverse(number1);
             case "-x":
-                return Console.switchSign(num1);
+                return Console.switchSign(number1);
             case "10x":
-                return Console.logInverse(num1);
+                return Console.logInverse(number1);
             case "Ln":
-                return Console.naturalAlgorithm(num1);
+                return Console.naturalLogarithm(number1);
             case "ex":
-                return Console.inverseNaturalAlgorithm(num1);
+                return Console.inverseNaturalLogarithm(number1);
+
+//                return Console.factorial(number1);
+            case "1/":
+                return Console.inverse(number1);
+            case "^2":
+                return Console.square(number1);
+            case "switch(":
+                return Console.switchSign(number1);
+
             default:
                 throw new IllegalArgumentException("Invalid operator: " + operator);
         }
     }
-    public double performBinaryOperation(double num1, double num2, String operator) {
+    public double performBinaryOperation(double number1, double number2, String operator) {
         switch (operator) {
             case "+":
-                return num1 + num2;
+                return Console.addition(number1, number2);
             case "-":
-                return num1 - num2;
+                return Console.subtraction(number1, number2);
             case "*":
-                return Console.multiplication(num1, num2);
+                return Console.multiplication(number1, number2);
             case "/":
-                if (num2 != 0) {
-                    return num1 / num2;
-                } else {
-                    throw new ArithmeticException("Division by zero is not allowed.");
-                }
+                return Console.division(number1, number2);
             case "%":
-                return Console.modulus(num1, num2);
+                return Console.modulus(number1, number2);
             case "^":
-                return Math.pow(num1, num2);
-            case "log(":
-                return Math.log(num2) / Math.log(num1); // Logarithm with base num1
-            case "!":
-                return Console.factorial(num1);
+                return Math.pow(number1, number2);
             default:
                 throw new IllegalArgumentException("Invalid operator: " + operator);
         }
