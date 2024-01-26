@@ -183,10 +183,20 @@ public class Console {
         return Math.pow(10,number1);
     }
     public static double naturalLogarithm(double number1) {
-        return naturalLogarithm(number1);
+        if (number1 > 0) {
+            return Math.log(number1);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be greater than 0");
+        }
     }
     public static double inverseNaturalLogarithm(double number1) {
-        return inverseNaturalLogarithm(number1);
+        if (number1 > 0) {
+            return Math.exp(number1);
+        }
+        else {
+            throw new IllegalArgumentException("Value must be greater than 0");
+        }
     }
     // TEVIN'S METHODS
 
